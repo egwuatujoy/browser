@@ -40,8 +40,15 @@ body {
 .open-h1 {
   color: hsl(227, 75%, 14%);
 }
+.open-description {
+  color: hsl(0, 0%, 78%);
+}
 
 .bg-color {
+  background-color: hsl(200, 60%, 99%);
+}
+
+.grid-container .bg-color {
   background-color: hsl(200, 60%, 99%);
 }
 
@@ -70,6 +77,7 @@ body {
   border: 0;
   border-radius: 12px;
   color: #fff;
+  border: 1px solid hsl(0, 0%, 78%);
 }
 
 .buttons button.active-btn {
@@ -77,6 +85,12 @@ body {
   color: #040918;
 }
 
+.buttons .open-active {
+  color: #040918;
+  background-color: #fff;
+  font-weight: 500;
+  font-family: "Noto Sans", sans-serif;
+}
 .extension-div {
   background-color: hsl(225, 23%, 24%);
   margin-bottom: 10px;
@@ -98,11 +112,19 @@ body {
 
 .grid-container {
   display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
   gap: 1rem;
 }
 
-@media (min-width: 700px) {
+@media (max-width: 1400px) {
   .grid-container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 900px) {
+  .grid-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
