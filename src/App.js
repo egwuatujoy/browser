@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
+import NavBar from "./components/NavBar";
 
 const App = () => {
   const [isOpen, setOpen] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
   return (
     <div className="app">
       <Header toggleBg={toggleBg} isOpen={isOpen} />
+      <NavBar />
     </div>
   );
 };
