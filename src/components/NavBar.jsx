@@ -12,9 +12,7 @@ const NavBar = ({ isOpen }) => {
         {buttons.map((btn) => (
           <button
             onClick={() => setActive(btn)}
-            className={`isActive === btn ? "active-btn" : "" ${
-              isOpen ? "open-active" : ""
-            }`}
+            className={` ${isActive === btn ? "active-btn" : ""}   btn `}
           >
             {btn}
           </button>

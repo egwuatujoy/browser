@@ -71,7 +71,7 @@ body {
   gap: 10px;
 }
 
-.buttons button {
+.buttons .btn {
   padding: 5px 12px;
   background-color: hsl(226, 11%, 37%);
   border: 0;
@@ -91,6 +91,15 @@ body {
   font-weight: 500;
   font-family: "Noto Sans", sans-serif;
 }
+
+.buttons .btns {
+  padding: 5px 12px;
+  background: none;
+  border: 1px solid hsl(0, 0%, 78%);
+  border-radius: 12px;
+  color: #fff;
+}
+
 .extension-div {
   background-color: hsl(225, 23%, 24%);
   margin-bottom: 10px;
@@ -113,8 +122,16 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-
   gap: 1rem;
+}
+
+.active-btn {
+  background-color: hsl(3, 86%, 64%);
+}
+
+.toggle-on {
+  color: hsl(3, 86%, 64%);
+  font-size: 25px;
 }
 
 @media (max-width: 1400px) {
@@ -127,4 +144,16 @@ body {
   .grid-container {
     grid-template-columns: repeat(1, 1fr);
   }
+}
+
+@media (max-width: 400px) {
+  body {
+    padding: 20px 30px;
+  }
+
+
+.navs h1 {
+  font-size: 16px;
+}
+
 }
