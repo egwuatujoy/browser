@@ -92,6 +92,14 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
+.btnss {
+  padding: 5px 12px;
+  background: none;
+  border: 1px solid hsl(0, 0%, 78%);
+  border-radius: 12px;
+  color: #fff;
+  background-color: hsl(226, 11%, 37%);
+}
 .buttons .btns {
   padding: 5px 12px;
   background: none;
@@ -151,9 +159,7 @@ body {
     padding: 20px 30px;
   }
 
-
-.navs h1 {
-  font-size: 16px;
-}
-
+  .navs h1 {
+    font-size: 16px;
+  }
 }
