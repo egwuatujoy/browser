@@ -36,8 +36,8 @@ const NavBar = ({ isOpen, onToggle, data, removeList }) => {
                   ? "actives"
                   : isActive === btn
                   ? "active-btn"
-                  : ""
-              }  btnss`}
+                  : "active"
+              }  btnss ${isOpen ? "remove-btn" : ""}`}
             >
               {btn}
             </button>
@@ -56,3 +56,4 @@ const NavBar = ({ isOpen, onToggle, data, removeList }) => {
 };
 
 export default NavBar;
+

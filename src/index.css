@@ -65,7 +65,6 @@ body {
 
 .buttons {
   display: flex;
-  /* justify-content: center; */
   justify-content: space-between;
   align-items: center;
   gap: 10px;
@@ -78,6 +77,7 @@ body {
   border-radius: 12px;
   color: #fff;
   border: 1px solid hsl(0, 0%, 78%);
+  font-weight: 800;
 }
 
 .buttons .open-active {
@@ -87,7 +87,7 @@ body {
   font-family: "Noto Sans", sans-serif;
 }
 
-.btnss {
+.buttons .btnss {
   padding: 5px 12px;
   background: none;
   border: 1px solid hsl(0, 0%, 78%);
@@ -95,6 +95,7 @@ body {
   color: #fff;
   background-color: hsl(226, 11%, 37%);
 }
+
 .buttons .btns {
   padding: 5px 12px;
   background: none;
@@ -133,17 +134,24 @@ body {
   font-size: 25px;
 }
 .buttons .remove-btn {
-  background-color: hsl(0, 0%, 93%);
-  color: hsl(225, 23%, 24%);
+  background-color: hsl(200, 60%, 99%);
+  color: hsl(226, 11%, 37%);
   font-weight: 600;
+  border: 1px solid hsl(3, 71%, 56%);
 }
 
 .buttons button.active-btn {
   background-color: hsl(3, 86%, 64%);
+  color: hsl(225, 23%, 24%);
 }
 
 .buttons button.actives {
   background-color: hsl(3, 71%, 56%);
+  color: #fff;
+}
+
+.active {
+  background-color: hsl(0, 0%, 93%);
 }
 
 @media (max-width: 1400px) {
