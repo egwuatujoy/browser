@@ -80,15 +80,6 @@ body {
   border: 1px solid hsl(0, 0%, 78%);
 }
 
-.buttons button.active-btn {
-  background-color: hsl(3, 86%, 64%);
-  color: #040918;
-}
-
-.buttons button.active-btns {
-  background-color: hsl(3, 77%, 44%);
-}
-
 .buttons .open-active {
   color: #040918;
   background-color: #fff;
@@ -137,10 +128,6 @@ body {
   gap: 1rem;
 }
 
-.active-btn {
-  background-color: hsl(3, 86%, 64%);
-}
-
 .toggle-on {
   color: hsl(3, 86%, 64%);
   font-size: 25px;
@@ -149,6 +136,14 @@ body {
   background-color: hsl(0, 0%, 93%);
   color: hsl(225, 23%, 24%);
   font-weight: 600;
+}
+
+.buttons button.active-btn {
+  background-color: hsl(3, 86%, 64%);
+}
+
+.buttons button.actives {
+  background-color: hsl(3, 71%, 56%);
 }
 
 @media (max-width: 1400px) {

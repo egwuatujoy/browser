@@ -31,8 +31,13 @@ const NavBar = ({ isOpen, onToggle, data, removeList }) => {
             <button
               key={i}
               onClick={(e) => selectedBtn(btn, e)}
-              className={`
-              btnss`}
+              className={`${
+                isActive === btn && isOpen
+                  ? "actives"
+                  : isActive === btn
+                  ? "active-btn"
+                  : ""
+              }  btnss`}
             >
               {btn}
             </button>
