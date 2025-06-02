@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import ExtensionList from "./ExtensionList";
-import data from "../data.json";
 
-const NavBar = ({ isOpen }) => {
+const NavBar = ({ isOpen, onToggle, data, removeList }) => {
   const buttons = ["All", "Active", "Inactive"];
 
   const [isActive, setActive] = useState();
@@ -17,24 +16,23 @@ const NavBar = ({ isOpen }) => {
   if (sortBy === "Inactive") {
     sortedItems = data.filter((da) => da.isActive === false);
   }
-  console.log(sortedItems);
 
   const selectedBtn = (btn, e) => {
     setActive(btn);
     setSortBy(e.target.innerHTML);
   };
-
+  console.log(sortedItems);
   return (
     <>
       <div className="navs">
         <h1 className={`${isOpen ? "open-h1" : ""}`}>Extensions List</h1>
         <div className="buttons">
-          {buttons.map((btn) => (
+          {buttons.map((btn, i) => (
             <button
+              key={i}
               onClick={(e) => selectedBtn(btn, e)}
-              className={`${isActive === btn ? "active-btn" : ""} ${
-                isOpen ? "open-active" : ""
-              } btnss`}
+              className={`
+              btnss`}
             >
               {btn}
             </button>
@@ -42,7 +40,12 @@ const NavBar = ({ isOpen }) => {
         </div>
       </div>
 
-      <ExtensionList isOpen={isOpen} data={sortedItems} />
+      <ExtensionList
+        isOpen={isOpen}
+        data={sortedItems}
+        onToggle={onToggle}
+        removeList={removeList}
+      />
     </>
   );
 };

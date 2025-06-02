@@ -85,6 +85,10 @@ body {
   color: #040918;
 }
 
+.buttons button.active-btns {
+  background-color: hsl(3, 77%, 44%);
+}
+
 .buttons .open-active {
   color: #040918;
   background-color: #fff;
@@ -140,6 +144,11 @@ body {
 .toggle-on {
   color: hsl(3, 86%, 64%);
   font-size: 25px;
+}
+.buttons .remove-btn {
+  background-color: hsl(0, 0%, 93%);
+  color: hsl(225, 23%, 24%);
+  font-weight: 600;
 }
 
 @media (max-width: 1400px) {

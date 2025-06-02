@@ -1,17 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faToggleOff } from "@fortawesome/free-solid-svg-icons";
 import { faToggleOn } from "@fortawesome/free-solid-svg-icons";
 
-const Lists = ({ ext, isOpen }) => {
-  const [toggle, setToggle] = useState(faToggleOn);
-
-  const onToggle = () => {
-    setToggle((prevToggle) =>
-      prevToggle === faToggleOn ? faToggleOff : faToggleOn
-    );
-  };
-
+const Lists = ({ ext, isOpen, onToggle, removeList }) => {
   return (
     <div className={`extension-div ${isOpen ? "bg-color" : ""}`}>
       <div className="extension-details">
@@ -25,11 +17,16 @@ const Lists = ({ ext, isOpen }) => {
       </div>
 
       <div className="buttons">
-        <button className="btns">Remove</button>
+        <button
+          className={`btns  ${isOpen ? "remove-btn" : ""} `}
+          onClick={() => removeList(ext.id)}
+        >
+          Remove
+        </button>
         <FontAwesomeIcon
-          icon={toggle}
+          icon={ext.isActive ? faToggleOn : faToggleOff}
           className="toggle-on"
-          onClick={onToggle}
+          onClick={() => onToggle(ext.id)}
         />
       </div>
     </div>
